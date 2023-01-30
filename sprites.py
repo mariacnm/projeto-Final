@@ -1,4 +1,5 @@
 import pygame
+import random
 
 class Caixa(pygame.sprite.Sprite):
     def __init__(self, dicionario_de_arquivos):
@@ -9,12 +10,14 @@ class Caixa(pygame.sprite.Sprite):
         self.image = dicionario_de_arquivos['input'] # Carregue a imagem do input disponível em dicionario_de_arquivos
         self.image= pygame.transform.scale(self.image, (273,76))
         self.rect = self.image.get_rect()
-        self.rect.x = 300
-        self.rect.y =50
+        self.rect.x = random.randint(100,500)
+        self.rect.y =-30
         self.speedy = 10
+        self.palavra= "teste"
 
-    #def update(self):
+    def update(self):
         #Atualização da posição da nave
+        for 
         #Aqui você deve definir a lógica para fazer a caixa cair
 
 
