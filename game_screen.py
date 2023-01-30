@@ -22,9 +22,8 @@ def game_screen(window):
     caixa= Caixa(dicionario_de_arquivos)
     lista_caixas.add(caixa)
 
-
     font = pygame.font.SysFont(None, 48)
-    text = font.render(caixa.palavra,True,(255, 255, 0))
+    text = font.render(caixa.palavra  ,True,(0, 0, 0))
     # ===== Loop principal =====
     while state != DONE:
         clock.tick(FPS)
@@ -40,9 +39,10 @@ def game_screen(window):
         # ----- Gera saídas
         window.fill(BLACK)  # Preenche com a cor branca
         lista_caixas.draw(window)
-        window.blit(text, (caixa.rect.x+100,caixa.rect.y+6))
-
+        window.blit(text, (caixa.rect.x+100, caixa.rect.y+4))
+        
         lista_caixas.update()
+
         pygame.display.update()  # Mostra o novo frame para o jogador
 
     return state
