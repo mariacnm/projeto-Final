@@ -24,11 +24,12 @@ def game_screen(window):
 
     font = pygame.font.SysFont(None, 48)
     text = font.render(caixa.palavra  ,True,(0, 0, 0))
+    palavra=""
     # ===== Loop principal =====
     while state != DONE:
         clock.tick(FPS)
         segundos = int(pygame.time.get_ticks() - last_update)
-        print(segundos)
+        #print(segundos)
 
         # ----- Trata eventos
         for event in pygame.event.get():
@@ -36,11 +37,18 @@ def game_screen(window):
             # ----- Verifica consequências
             if event.type == pygame.QUIT:
                 state = DONE
-
+            if event.type == pygame.KEYDOWN:
+                palavra+=event.unicode
+         
         # ----- Gera saídas
         window.fill(BLACK)  # Preenche com a cor branca
         lista_caixas.draw(window)
         window.blit(text, (caixa.rect.x+100, caixa.rect.y+4))
+
+        #palavra
+        font = pygame.font.SysFont(None, 48)
+        text2 = font.render(palavra  ,True,(0, 0, 0))
+        window.blit(text2, (caixa.rect.x+70, caixa.rect.y+35))
         
         lista_caixas.update()
 
