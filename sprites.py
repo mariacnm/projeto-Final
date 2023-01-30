@@ -6,14 +6,15 @@ class Caixa(pygame.sprite.Sprite):
         pygame.sprite.Sprite.__init__(self)
 
         # TODO 1: Defina as informações abaixo
-        # self.image = # Carregue a imagem do input disponível em dicionario_de_arquivos
+        self.image = dicionario_de_arquivos['input'] # Carregue a imagem do input disponível em dicionario_de_arquivos
+        self.image= pygame.transform.scale(self.image, (273,76))
         self.rect = self.image.get_rect()
-        # self.rect.x = # define uma posição para teste (Depois vamos tornar esta posição aleatória)
-        # self.rect.y =# defina uma posição para teste
-        # self.speedy = # aqui defina uma velocidade em que o input cairá
+        self.rect.x = 
+        self.rect.y =2
+        self.speedy = 30
 
-    # def update(self):
-        # Atualização da posição da nave
+    #def update(self):
+        #Atualização da posição da nave
         #Aqui você deve definir a lógica para fazer a caixa cair
 
 
