@@ -3,6 +3,7 @@ import random
 
 class Caixa(pygame.sprite.Sprite):
     def __init__(self, dicionario_de_arquivos):
+
         # Construtor da classe mãe (Sprite).
         pygame.sprite.Sprite.__init__(self)
 
@@ -13,7 +14,6 @@ class Caixa(pygame.sprite.Sprite):
         self.rect.x = random.randint(100,500)
         self.rect.y =-30
         self.speedy = 10
-        self.palavra= "teste"
 
     def update(self):
         #Atualização da posição da nave
