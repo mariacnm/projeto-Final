@@ -49,7 +49,7 @@ def game_screen(window):
         font = pygame.font.SysFont(None, 48)
         text2 = font.render(palavra  ,True,(0, 0, 0))
         window.blit(text2, (caixa.rect.x+70, caixa.rect.y+35))
-        
+        #amor 
         lista_caixas.update()
 
         pygame.display.update()  # Mostra o novo frame para o jogador
