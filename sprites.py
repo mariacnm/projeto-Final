@@ -9,9 +9,9 @@ class Caixa(pygame.sprite.Sprite):
         self.image = dicionario_de_arquivos['input'] # Carregue a imagem do input disponível em dicionario_de_arquivos
         self.image= pygame.transform.scale(self.image, (273,76))
         self.rect = self.image.get_rect()
-        self.rect.x = 
-        self.rect.y =2
-        self.speedy = 30
+        self.rect.x = 300
+        self.rect.y =50
+        self.speedy = 10
 
     #def update(self):
         #Atualização da posição da nave
