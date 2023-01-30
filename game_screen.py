@@ -32,6 +32,7 @@ def game_screen(window):
 
         # ----- Trata eventos
         for event in pygame.event.get():
+            
             # ----- Verifica consequências
             if event.type == pygame.QUIT:
                 state = DONE
